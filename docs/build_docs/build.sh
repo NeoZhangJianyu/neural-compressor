@@ -142,7 +142,8 @@ fi
 echo "Create document is done"
 
 if [[ ${CHECKOUT_GH_PAGES} -eq 1 ]]; then
-  git clone -b gh-pages --single-branch https://github.com/intel/neural-compressor.git ${RELEASE_FOLDER}
+  GITHUB_URL=`git config --get remote.origin.url`
+  git clone -b gh-pages --single-branch ${GITHUB_URL} ${RELEASE_FOLDER}
  
   if [[ ${UPDATE_VERSION_FOLDER} -eq 1 ]]; then
     python update_version.py ${ROOT_DST_FOLDER} ${VERSION}
