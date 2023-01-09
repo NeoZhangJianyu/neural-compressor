@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>neural_compressor.utils.utility &mdash; Intel® Neural Compressor 2.0 documentation</title>
+  <title>neural_compressor.utils.utility &mdash; Intel® Neural Compressor  documentation</title>
   
 
   
@@ -46,57 +46,55 @@
 
 <body class="wy-body-for-nav">
 
-   
+  
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <div class="navbar-logo">
+          <a href="https://intel.github.io/neural-compressor/Welcome.html" alt="Intel homepage" class="intel-logo-rebrand">
+            <span class="headTitleStyle"> Intel® Neural Compressor</span> 
+          </a>
+        <div class="version">
+              <a href="../../../../../versions.html">2.0▼</a>
+              <p>Click link above to switch version</p>
+            </div>
+    </div>
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
   <div class="wy-grid-for-nav">
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
           
+   
 
-          
-            <a href="../../../../index.html" class="icon icon-home"> Intel® Neural Compressor
-          
-
-          
-          </a>
-
-          
-            
-            
-            <div class="version">
-              <a href="../../../../../versions.html">2.0▼</a>
-              <p>Click link above to switch version</p>
-            </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
         </div>
 
         
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+
             
             
               
             
             
               <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Welcome.html">Intel® Neural Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples_readme.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api-documentation/apis.html">APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../releases_info.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../legal_information.html">Legal Information</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/intel/neural-compressor">Intel® Neural Compressor repository</a></li>
 </ul>
 
             
           
+
         </div>
         
       </div>
@@ -179,16 +177,13 @@ options.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.CpuInfo" title="neural_compressor.utils.utility.CpuInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CpuInfo</span></code></a></p></td>
 <td><p>Get CPU Info.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.CaptureOutputToFile" title="neural_compressor.utils.utility.CaptureOutputToFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CaptureOutputToFile</span></code></a></p></td>
-<td><p>Not displayed in API Docs.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.Statistics" title="neural_compressor.utils.utility.Statistics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Statistics</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.Statistics" title="neural_compressor.utils.utility.Statistics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Statistics</span></code></a></p></td>
 <td><p>The statistics printer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.MODE" title="neural_compressor.utils.utility.MODE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MODE</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.MODE" title="neural_compressor.utils.utility.MODE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MODE</span></code></a></p></td>
 <td><p>Mode: Quantization, Benchmark or Pruning.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.GLOBAL_STATE" title="neural_compressor.utils.utility.GLOBAL_STATE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLOBAL_STATE</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.utils.utility.GLOBAL_STATE" title="neural_compressor.utils.utility.GLOBAL_STATE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GLOBAL_STATE</span></code></a></p></td>
 <td><p>Access the global model.</p></td>
 </tr>
 </tbody>
@@ -465,14 +460,6 @@ options.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="neural_compressor.utils.utility.CaptureOutputToFile">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.utils.utility.</span></span><span class="sig-name descname"><span class="pre">CaptureOutputToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tmp_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">sys.stderr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neural_compressor.utils.utility.CaptureOutputToFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Not displayed in API Docs.</p>
-<p>Capture the output to file.</p>
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="neural_compressor.utils.utility.Statistics">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.utils.utility.</span></span><span class="sig-name descname"><span class="pre">Statistics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_handle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">logger.info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neural_compressor.utils.utility.Statistics" title="Permalink to this definition">¶</a></dt>
 <dd><p>The statistics printer.</p>
@@ -567,7 +554,7 @@ options.</p>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2022, Intel® Neural Compressor, Intel.
+        &#169; Copyright 2022, Intel® Neural Compressor.
 
     </p>
   </div>
@@ -599,6 +586,11 @@ options.</p>
   
     
    
+<script script type="text/javascript">
+  var collapsedSections = ['start', 'autoapi', 'info'];
+</script>
+
+
 
 </body>
 </html>

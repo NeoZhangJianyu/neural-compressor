@@ -24,7 +24,6 @@ Classes
 
    neural_compressor.utils.utility.LazyImport
    neural_compressor.utils.utility.CpuInfo
-   neural_compressor.utils.utility.CaptureOutputToFile
    neural_compressor.utils.utility.Statistics
    neural_compressor.utils.utility.MODE
    neural_compressor.utils.utility.GLOBAL_STATE
@@ -209,15 +208,6 @@ Functions
 .. py:function:: Dequantize(data, scale_info)
 
    Dequantize the data with the scale_info.
-
-
-.. py:class:: CaptureOutputToFile(tmp_file_path, stream=sys.stderr)
-
-   Bases: :py:obj:`object`
-
-   Not displayed in API Docs.
-
-   Capture the output to file.
 
 
 .. py:class:: Statistics(data, header, field_names, output_handle=logger.info)

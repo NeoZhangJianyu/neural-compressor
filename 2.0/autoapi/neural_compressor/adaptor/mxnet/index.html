@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>neural_compressor.adaptor.mxnet &mdash; Intel® Neural Compressor 2.0 documentation</title>
+  <title>neural_compressor.adaptor.mxnet &mdash; Intel® Neural Compressor  documentation</title>
   
 
   
@@ -46,57 +46,55 @@
 
 <body class="wy-body-for-nav">
 
-   
+  
+<div class="container-fluid header-holder tutorials-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <div class="navbar-logo">
+          <a href="https://intel.github.io/neural-compressor/Welcome.html" alt="Intel homepage" class="intel-logo-rebrand">
+            <span class="headTitleStyle"> Intel® Neural Compressor</span> 
+          </a>
+        <div class="version">
+              <a href="../../../../../versions.html">2.0▼</a>
+              <p>Click link above to switch version</p>
+            </div>
+    </div>
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
   <div class="wy-grid-for-nav">
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
           
+   
 
-          
-            <a href="../../../../index.html" class="icon icon-home"> Intel® Neural Compressor
-          
-
-          
-          </a>
-
-          
-            
-            
-            <div class="version">
-              <a href="../../../../../versions.html">2.0▼</a>
-              <p>Click link above to switch version</p>
-            </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
         </div>
 
         
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
+
             
             
               
             
             
               <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Welcome.html">Intel® Neural Compressor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples_readme.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api-documentation/apis.html">APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../releases_info.html">Release</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../legal_information.html">Legal Information</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/intel/neural-compressor">Intel® Neural Compressor repository</a></li>
 </ul>
 
             
           
+
         </div>
         
       </div>
@@ -170,6 +168,9 @@
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#neural_compressor.adaptor.mxnet.MxNetAdaptor" title="neural_compressor.adaptor.mxnet.MxNetAdaptor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MxNetAdaptor</span></code></a></p></td>
 <td><p>The MXNet adaptor layer, do MXNet quantization, calibration, inspect layer tensors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#neural_compressor.adaptor.mxnet.MXNetQuery" title="neural_compressor.adaptor.mxnet.MXNetQuery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MXNetQuery</span></code></a></p></td>
+<td><p>Base class that defines Query Interface.</p></td>
 </tr>
 </tbody>
 </table>
@@ -336,6 +337,53 @@ The dict format is something like:
 
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="neural_compressor.adaptor.mxnet.MXNetQuery">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neural_compressor.adaptor.mxnet.</span></span><span class="sig-name descname"><span class="pre">MXNetQuery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_config_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neural_compressor.adaptor.mxnet.MXNetQuery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../query/index.html#neural_compressor.adaptor.query.QueryBackendCapability" title="neural_compressor.adaptor.query.QueryBackendCapability"><code class="xref py py-obj docutils literal notranslate"><span class="pre">neural_compressor.adaptor.query.QueryBackendCapability</span></code></a></p>
+<p>Base class that defines Query Interface.
+Each adaption layer should implement the inherited class for specific backend on their own.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="neural_compressor.adaptor.mxnet.MXNetQuery.get_version">
+<span class="sig-name descname"><span class="pre">get_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neural_compressor.adaptor.mxnet.MXNetQuery.get_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current backend’s version string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neural_compressor.adaptor.mxnet.MXNetQuery.get_precisions">
+<span class="sig-name descname"><span class="pre">get_precisions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neural_compressor.adaptor.mxnet.MXNetQuery.get_precisions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the supported low precisions, e.g [‘int8’, ‘bf16’]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neural_compressor.adaptor.mxnet.MXNetQuery.get_op_types">
+<span class="sig-name descname"><span class="pre">get_op_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neural_compressor.adaptor.mxnet.MXNetQuery.get_op_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the op types for specific backend per low precision.
+e.g {‘1.6.0’: {‘int8’: [‘Conv2D’, ‘fully_connected’]}}</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neural_compressor.adaptor.mxnet.MXNetQuery.get_fuse_patterns">
+<span class="sig-name descname"><span class="pre">get_fuse_patterns</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neural_compressor.adaptor.mxnet.MXNetQuery.get_fuse_patterns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the fusion patterns for specified op type for every specific precision</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neural_compressor.adaptor.mxnet.MXNetQuery.get_quantization_capability">
+<span class="sig-name descname"><span class="pre">get_quantization_capability</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neural_compressor.adaptor.mxnet.MXNetQuery.get_quantization_capability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the quantization capability of low precision op types.
+e.g, granularity, scheme and etc.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neural_compressor.adaptor.mxnet.MXNetQuery.get_mixed_precision_combination">
+<span class="sig-name descname"><span class="pre">get_mixed_precision_combination</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#neural_compressor.adaptor.mxnet.MXNetQuery.get_mixed_precision_combination" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the valid precision combination base on hardware and user’ config.
+e.g[‘fp32’, ‘bf16’, ‘int8’]</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 </section>
@@ -350,7 +398,7 @@ The dict format is something like:
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2022, Intel® Neural Compressor, Intel.
+        &#169; Copyright 2022, Intel® Neural Compressor.
 
     </p>
   </div>
@@ -382,6 +430,11 @@ The dict format is something like:
   
     
    
+<script script type="text/javascript">
+  var collapsedSections = ['start', 'autoapi', 'info'];
+</script>
+
+
 
 </body>
 </html>
