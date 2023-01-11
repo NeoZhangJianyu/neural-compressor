@@ -12,11 +12,7 @@
     color: #000000;
 }
 
-/* set color of version navigator to yellow */
-div.version a {
-    color: hsla(0,0%,100%,.9);
-}
-a:visited {
-    color: #afafaf;
+a:link {
+  color: #ffffff;
 }
 
