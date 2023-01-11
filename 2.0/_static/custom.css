@@ -12,6 +12,10 @@
     color: #000000;
 }
 
-.wy-side-nav-search>div.version.a:link {
-  color: hsla(0,0%,100%,.9)
+div.version a:link {
+  color: #ffffff;
 }
+div.version a:visited {
+  color: #dddddd;
+}
+
