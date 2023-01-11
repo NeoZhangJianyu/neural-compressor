@@ -113,7 +113,7 @@ inc_bench
 
 <table class="docutils">
 <thead>
-  <tr>
+  <tr style="vertical-align: middle;">
     <th>Framework</th>
     <th>TensorFlow</th>
     <th>Intel<br>TensorFlow</th>
