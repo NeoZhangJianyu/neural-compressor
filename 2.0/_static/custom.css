@@ -12,7 +12,9 @@
     color: #000000;
 }
 
-a:link {
-  color: #ffffff;
+div.version {
+  color: hsla(0, 0%, 100%, 0.86);
 }
+
+
 
